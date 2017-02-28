@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mozg_Test>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mozg_Test>
+    </modules>
+</config>

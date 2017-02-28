@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Mozg. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config>
+    <modules>
+        <Mozg_Test>
+            <version>1.0.0</version>
+        </Mozg_Test>
+    </modules>
+    <global>
+        <models>
+            <mozg_test>
+                <class>Mozg_Test_Model</class>
+            </mozg_test>
+        </models>
+        <helpers>
+            <mozg_test>
+                <class>Mozg_Test_Helper</class>
+            </mozg_test>
+        </helpers>
+        <blocks>
+            <mozg_test>
+                <class>Mozg_Test_Block</class>
+            </mozg_test>
+        </blocks>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Mozg_Test after="Mage_Adminhtml">Mozg_Test_Adminhtml</Mozg_Test>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Mozg_Test>
+                    <files>
+                        <default>Mozg_Test.csv</default>
+                    </files>
+                </Mozg_Test>
+            </modules>
+        </translate>
+        <events>
+        </events>
+        <layout>
+            <updates>
+                <mozg_test>
+                    <file>mozg_test.xml</file>
+                </mozg_test>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <mozg_test>
+                    <file>mozg_test.xml</file>
+                </mozg_test>
+            </updates>
+        </layout>
+        <routers>
+            <mozg_test>
+                <use>standard</use>
+                <args>
+                    <module>Mozg_Test</module>
+                    <frontName>mozg_test</frontName>
+                </args>
+            </mozg_test>
+        </routers>
+        <translate>
+            <modules>
+                <Mozg_Test>
+                    <files>
+                        <default>Mozg_Test.csv</default>
+                    </files>
+                </Mozg_Test>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+    </default>
+    <crontab>
+        <jobs>
+            <mozg_test_process_notification_queue>
+                <schedule>
+                    <cron_expr>*/1 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>mozg_test/cronjob::ordersInvoice</model>
+                </run>
+            </mozg_test_process_notification_queue>
+        </jobs>
+    </crontab>
+</config>
