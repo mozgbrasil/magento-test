@@ -23,7 +23,7 @@
         "irc": "irc://irc.freenode.org/mozgbrasil",
         "source": "https://github.com/mozgbrasil/magento-test",
         "docs": "https://github.com/mozgbrasil/magento-test/wiki",
-        "rss": "https://mozg.com.br/feed.xml"
+        "rss": "http://mozg.com.br/sitemap.xml"
     },
     "require" : {
         "magento-hackathon/magento-composer-installer":"*"
