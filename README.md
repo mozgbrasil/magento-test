@@ -20,17 +20,17 @@ Esta biblioteca destina-se a ser instalado usando o [Composer][getcomposer].
 
     composer require mozgbrasil/magento-test
 
--- 
+--
 
 ### Para atualizar o módulo execute o comando a seguir no terminal do seu servidor
 
-    composer clear-cache && composer update
+    composer update
 
 --
 
 ### Para [desinstalar][uninstall-mods] o módulo execute o comando a seguir no terminal do seu servidor
 
-    composer remove mozgbrasil/magento-test && composer clear-cache && composer update
+    composer remove mozgbrasil/magento-test
 
 ## Perguntas mais frequentes "FAQ"
 
